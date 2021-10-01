@@ -64,3 +64,78 @@ You can use grep command to get information about a particular user from the /et
 $ grep username /etc/passwd
 Grep Username
 We get information about a user named Adam from the /etc/passwd file.
+
+sample shell script command
+How to Write Shell Script in Linux/Unix
+Shell Scripts are written using text editors. On your Linux system, open a text editor program, open a new file to begin typing a shell script or shell programming, then give the shell permission to execute your shell script and put your script at the location from where the shell can find it.
+
+Let us understand the steps in creating a Shell Script:
+
+Create a file using a vi editor(or any other editor). Name script file with extension .sh
+Start the script with #! /bin/sh
+Write some code.
+Save the script file as filename.sh
+For executing the script type bash filename.sh
+“#!” is an operator called shebang which directs the script to the interpreter location. So, if we use”#! /bin/sh” the script gets directed to the bourne-shell.
+
+Let’s create a small script –
+
+#!/bin/sh
+#Sample 1
+ls
+
+#!/bin/sh
+#Sample 2
+echo "what is your name?"
+read name
+echo "How do you do, $name?"
+read remark
+echo "I am $remark too!"
+
+ps -ef | grep sshd to check SSH is running
+
+
+Password settings change for EC2 Intances
+cd /etc/ssh/ Go to this path
+vi sshd_config is the file comend password and enable the setting
+
+/etc/ssh are directories
+
+ systemctl restart sshd to restart sshd if we make any changes on authentication
+ 
+C:\Users\Navaneethan C is the home directory in windows
+
+cat /etc/passwd|grep root to know the directory of the user grep username you looking for
+
+to view users 
+
+cd /etc/
+the cat passwd to view list of users 
+
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+libstoragemgmt:x:999:997:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+rngd:x:998:996:Random Number Generator Daemon:/var/lib/rngd:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+ec2-instance-connect:x:997:995::/home/ec2-instance-connect:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+chrony:x:996:994::/var/lib/chrony:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+
