@@ -1,0 +1,66 @@
+Fields/Column Description
+PID    Process Id
+USER   The effective user name of the task's owner
+PR    The priority of the task
+NI    The nice value of the task. A negative nice value means higher priority
+VIRT  The  total  amount  of  virtual  memory  used  by the task
+   not be adjusted in determining a task's dispatchability
+RES   The non-swapped physical memory a task has used
+ 
+S   'D' = uninterruptible sleep
+   'R' = running
+   'S' = sleeping
+   'T' = traced or stopped
+   'Z' = zombie  
+SHR   The amount of shared memory used by a task
+%CPU  The task's share of the elapsed CPU time since the last screen update, expressed as a
+   percentage of total CPU time.
+%MEM   A task's currently used share of available physical memory
+TIME+  Total CPU time the task has used since it started
+  
+Command  Display the command line used to start a task or the name of the associated program
+
+%Cpu  Value Meaning
+****************************
+us  user cpu time (or) % CPU time spent in user space
+sy  system cpu time (or) % CPU time spent in kernel space
+ni  user nice cpu time (or) % CPU time spent on low priority processes
+id  idle cpu time (or) % CPU time spent idle
+wa  io wait cpu time (or) % CPU time spent in wait (on disk)
+hi  hardware irq (or) % CPU time spent servicing/handling hardware interrupts
+si   software irq (or) % CPU time spent servicing/handling software interrupts
+st     steal time - - % CPU time in involuntary wait by virtual cpu while hypervisor is servicing
+  another processor (or) % CPU time stolen from a virtual machine
+
+Arguments in Top Command
+*************************************
+
+press 'u'   -  Particular user process listout
+press 'M'  -  Memory high to low usage
+press 'P"  -   CPU high to low usage
+press 'r'   -  Change nice value - default top PID or choose
+press 'k'   -  Kill process  - default top PID or choose
+press 'd'   -   Change refresh time - default 3 sec
+press 'n'   -   Choose No of task will be display
+press '1'   -  All the individual CPUs report
+press 'f'   -   list of available fields under top  command- add new fields / remove fields
+
+
+
+Using awk command to list all users in Ubuntu
+By using awk command we can get just the first field from the /etc/passwd file. Awk is a powerful text manipulation tool in Linux.
+
+$ awk -F: '{ print $1}' /etc/passwd
+
+Creating a new user
+Apart from knowing how to list all users in Ubuntu, it is important also to know how to add a new user. To create a new user in Linux, use the following command:
+
+$ useradd username
+This will create a new entry in the /etc/passwd file
+
+Get information about a particular user
+You can use grep command to get information about a particular user from the /etc/passwd file. This is useful if there are a lot of users in the /etc/passwd file. This can help in checking for the existence of a particular user.
+
+$ grep username /etc/passwd
+Grep Username
+We get information about a user named Adam from the /etc/passwd file.
