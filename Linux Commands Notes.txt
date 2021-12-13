@@ -142,3 +142,4 @@ ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
 
 Linux curl command is used to download or upload data to a server via supported protocols such as HTTP, FTP, IMAP, SFTP, TFTP, IMAP, POP3, SCP, etc. It is a remote utility, so it works without user interaction. The data transfer from one place to another is one of the vital and most used tasks of a computer system.
 
+1231
